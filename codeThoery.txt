@@ -1,0 +1,310 @@
+1️⃣ Recursive and Non-Recursive Fibonacci Numbers
+Concept:
+
+The Fibonacci sequence is a series where each number is the sum of the two preceding ones.
+The sequence starts with 0 and 1 → 0, 1, 1, 2, 3, 5, 8, 13…
+
+Explanation:
+
+Recursive Method:
+
+Defines Fibonacci as F(n) = F(n-1) + F(n-2) with base cases F(0)=0, F(1)=1.
+
+Uses function calls that repeatedly compute subproblems.
+
+It’s simple but inefficient due to overlapping subproblems.
+
+Non-Recursive (Iterative) Method:
+
+Uses a loop and variables to store previous two terms.
+
+Efficient since each Fibonacci number is calculated once.
+
+Complexity:
+
+Recursive:
+Time = O(2ⁿ), Space = O(n)
+
+Non-Recursive:
+Time = O(n), Space = O(1)
+
+Applications:
+
+Used in mathematical modeling, dynamic programming, and biological systems (like plant branching).
+
+2️⃣ Huffman Encoding using Greedy Strategy
+Concept:
+
+Huffman coding is a lossless data compression algorithm that assigns variable-length binary codes to characters based on their frequency.
+Characters with higher frequency get shorter codes.
+
+Explanation:
+
+Count frequency of each symbol.
+
+Create a min-heap of nodes sorted by frequency.
+
+Extract two smallest nodes, create a new parent node with their combined frequency.
+
+Repeat until one root node remains — that’s the Huffman tree.
+
+Traverse the tree:
+
+Left edge → ‘0’, Right edge → ‘1’
+
+Codes are derived from root to leaf path.
+
+Complexity:
+
+Building tree: O(n log n)
+
+Encoding/Decoding: O(L), where L = length of encoded message.
+
+Applications:
+
+Data compression in ZIP files, JPEG, MP3, and multimedia transmission.
+
+3️⃣ 0–1 Knapsack Problem (Dynamic Programming / Branch & Bound)
+Concept:
+
+Select items with given weights and values to maximize total value within a given capacity.
+Each item can either be included (1) or excluded (0).
+
+Explanation (Dynamic Programming):
+
+Define a table dp[i][w] for max profit using first i items and capacity w.
+
+Recursive formula:
+dp[i][w] = max(dp[i-1][w], value[i-1] + dp[i-1][w - weight[i-1]])
+
+Initialize first row/column to 0.
+
+The final answer is dp[n][W].
+
+Complexity:
+
+Time: O(nW)
+
+Space: O(nW)
+
+Applications:
+
+Resource allocation problems, investment portfolio design, and cargo loading optimization.
+
+4️⃣ N–Queens Problem using Backtracking
+Concept:
+
+Place N queens on an N×N chessboard so that no two queens attack each other.
+
+Explanation:
+
+Place one queen per row.
+
+For each column in a row:
+
+Check if it’s safe to place a queen (no other queen in same column, left or right diagonal).
+
+If safe → place queen → move to next row.
+
+If no valid position → backtrack to previous row.
+
+Complexity:
+
+Time: O(N!) (worst case)
+
+Space: O(N²)
+
+Applications:
+
+Used in AI (constraint satisfaction), puzzle-solving, and scheduling problems.
+
+5️⃣ Quick Sort (Deterministic and Randomized)
+Concept:
+
+QuickSort is a divide and conquer algorithm that partitions an array into subarrays around a pivot.
+
+Explanation:
+
+Partition: Choose a pivot and rearrange elements so smaller ones are on the left.
+
+Recursive Step: Sort subarrays left and right of the pivot.
+
+Deterministic Variant: Fixed pivot (like last element).
+
+Randomized Variant: Randomly select pivot to reduce chance of worst-case scenario.
+
+Complexity:
+
+Deterministic: Best/Average O(n log n), Worst O(n²)
+
+Randomized: Expected O(n log n)
+
+Applications:
+
+Sorting algorithms in databases, numerical computation, and competitive programming.
+
+6️⃣ Uber Ride Price Prediction (Linear & Random Forest Regression)
+Concept:
+
+Estimate Uber fare based on pickup/drop locations, distance, and time.
+
+Explanation:
+
+Linear Regression: Fits a straight line (y = mx + c) for fare prediction.
+
+Random Forest Regression: Uses multiple decision trees to handle non-linear data.
+
+Train models on dataset with features (distance, time, demand).
+
+Evaluate using R² score, MAE, RMSE.
+
+Applications:
+
+Price prediction, demand forecasting, route optimization in ride-sharing apps.
+
+7️⃣ Email Spam Detection (KNN and SVM)
+Concept:
+
+Classify email as Spam or Not Spam using machine learning algorithms.
+
+Explanation:
+
+Preprocess text (remove stop words, vectorize).
+
+KNN: Classify based on similarity to nearest neighbors.
+
+SVM: Finds optimal hyperplane separating spam and non-spam classes.
+
+Evaluate results using confusion matrix and performance metrics.
+
+Metrics:
+
+Accuracy, Precision, Recall, F1 Score.
+
+Applications:
+
+Email filtering, fraud detection, and text classification systems.
+
+8️⃣ Bank Customer Churn Prediction using Neural Network
+Concept:
+
+Predict whether a customer will leave the bank within the next six months.
+
+Explanation:
+
+Dataset includes attributes like age, balance, credit score, transaction history.
+
+Neural Network Structure:
+
+Input Layer → Hidden Layers (ReLU activation) → Output Layer (Sigmoid activation).
+
+Output: Probability of customer leaving (1) or staying (0).
+
+Applications:
+
+Used in banking and telecom for customer retention prediction.
+
+9️⃣ Diabetes Prediction using K-Nearest Neighbors
+Concept:
+
+Predict diabetes status based on medical data like glucose level, BMI, and age.
+
+Explanation:
+
+Use diabetes.csv dataset.
+
+Compute distance between test data and all training samples.
+
+Pick ‘k’ nearest neighbors and assign majority class.
+
+Metrics:
+
+Accuracy, Error rate, Precision, Confusion Matrix.
+
+Applications:
+
+Early disease prediction and medical decision-making.
+
+🔟 K-Means / Hierarchical Clustering on Sales Data
+Concept:
+
+Cluster similar sales records using unsupervised learning.
+
+Explanation:
+
+Load sales dataset.
+
+Apply K-Means clustering to divide into K groups.
+
+Use Elbow Method to choose best K by plotting SSE vs K.
+
+Hierarchical clustering can also visualize clusters using a dendrogram.
+
+Applications:
+
+Market segmentation, customer profiling, trend analysis.
+
+1️⃣1️⃣ MetaMask Installation and Ethereum Transactions
+Concept:
+
+MetaMask is a crypto wallet to store and transfer Ether on the Ethereum blockchain.
+
+Explanation:
+
+Install MetaMask browser extension.
+
+Create wallet, backup seed phrase.
+
+Connect to Ethereum testnet (like Sepolia).
+
+Send and receive Ether; observe gas fee and transaction cost.
+
+Applications:
+
+Blockchain payments, DApp development, Web3 wallet management.
+
+1️⃣2️⃣ Solidity Smart Contract for Bank Account
+Concept:
+
+Smart contract that performs basic bank operations on Ethereum blockchain.
+
+Explanation:
+
+Functions:
+
+function deposit(uint amount) public
+function withdraw(uint amount) public
+function getBalance() public view returns(uint)
+
+
+Updates balance variable.
+
+Deployed using Remix IDE and MetaMask.
+
+Applications:
+
+Decentralized banking and fintech DApps.
+
+1️⃣3️⃣ Solidity Smart Contract for Student Data
+Concept:
+
+Solidity program to store and manage student information using structures and arrays.
+
+Explanation:
+
+Define a struct Student with ID, name, and marks.
+
+Store records in an array.
+
+Use fallback function to handle transactions.
+
+Deploy and observe gas consumption.
+
+Applications:
+
+Blockchain-based student record management, academic certificate verification.
+
+Would you like me to format this entire theory into a clean, ready-to-print PDF (LP-III Mock Theory Notes) with:
+
+Headings, subpoints, and diagrams (where applicable)?
+I can generate that in one click for you.
